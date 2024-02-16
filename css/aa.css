@@ -1,0 +1,60 @@
+.testimonial-slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  .img {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50px;
+}
+  
+  .testimonial-slide {
+    flex: 0 0 50%; /* Equal width for two slides */
+    transition: transform 0.5s ease;
+  }
+  
+  .testimonial-content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semitransparent white background */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+  }
+  
+  .next-button,
+  .prev-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Display buttons on top of slides */
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semitransparent black background */
+  }
+  
+  .next-button {
+    right: 0;
+  }
+  
+  .prev-button {
+    left: 0;
+  }
+  
+  .testimonial-slider:hover .testimonial-slide {
+    transform: translateX(-50%); /* Show first slide on hover */
+  }
+  
+  .testimonial-slider:hover .next-button {
+    opacity: 1; /* Show next button on hover */
+  }
+  
+  .testimonial-slider:hover .prev-button {
+    opacity: 1; /* Show prev button on hover */
+  }
+  
